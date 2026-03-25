@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 EdTech Frontend — Next.js Application
 
-## Getting Started
+Modern, scalable frontend architecture for an EdTech platform (Courses + Blog) built with **Next.js App Router**, **React**, and **Tailwind CSS**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+
+* ⚛️ Next.js (App Router)
+* ⚛️ React
+* 🎨 Tailwind CSS
+* 🔐 JWT Authentication
+* 🌐 REST APIs (Microservices Backend)
+* 🧠 TypeScript (recommended)
+
+---
+
+## 🏗️ Project Structure
+
+```
+src/
+│
+├── app/                # Next.js App Router (pages, layouts, routing)
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Home page
+│   │
+│   ├── courses/        # Course-related routes
+│   │   ├── page.tsx
+│   │   └── [id]/page.tsx
+│   │
+│   ├── blog/           # Blog routes
+│   │   ├── page.tsx
+│   │   └── [slug]/page.tsx
+│   │
+│   ├── dashboard/      # User dashboard
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   └── auth/           # Authentication pages
+│       ├── login/page.tsx
+│       └── register/page.tsx
+│
+├── components/         # Reusable UI components
+│   ├── ui/             # Generic components (Button, Input, Modal)
+│   ├── layout/         # Navbar, Footer, Sidebar
+│   └── course/         # Course-specific components
+│
+├── features/           # Feature-based modules (domain-driven)
+│   ├── auth/
+│   ├── courses/
+│   └── blog/
+│
+├── services/           # API communication layer
+│   ├── apiClient.ts    # Axios / Fetch instance
+│   ├── authApi.ts
+│   ├── courseApi.ts
+│   └── blogApi.ts
+│
+├── hooks/              # Custom React hooks
+│   ├── useAuth.ts
+│   ├── useDebounce.ts
+│   └── usePagination.ts
+│
+├── context/            # Global state providers
+│   ├── AuthContext.tsx
+│   └── ThemeContext.tsx
+│
+├── lib/                # Utilities and helpers
+│   ├── utils.ts
+│   ├── validators.ts
+│   └── authHelpers.ts
+│
+├── types/              # TypeScript types/interfaces
+│   ├── user.ts
+│   ├── course.ts
+│   └── blog.ts
+│
+├── styles/             # Global styles
+│   └── globals.css
+│
+├── assets/             # Static assets
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+│
+└── constants/          # Application-wide constants
+    └── index.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Architecture Principles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✅ App Router First
 
-## Learn More
+Uses Next.js modern routing system with layouts and server components.
 
-To learn more about Next.js, take a look at the following resources:
+### ✅ Feature-Based Design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Code organized by business domains (auth, courses, blog).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ✅ Separation of Concerns
 
-## Deploy on Vercel
+* UI components
+* Business logic
+* API layer
+* State management
+* Utilities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ✅ Scalable Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Designed to grow from a student project to a production system.
+
+---
+
+## 🌐 API Integration
+
+Frontend communicates with backend microservices via an API Gateway:
+
+```
+Browser → Next.js App → API Gateway → Microservices
+```
+
+Authentication handled using JWT tokens.
+
+---
+
+## 🏁 Getting Started
+
+### Install dependencies
+
+```
+npm install
+```
+
+### Run development server
+
+```
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+---
+
+## 📌 Future Enhancements
+
+* 🔍 Search functionality
+* 💬 Real-time features (WebSockets)
+* 🎬 Video streaming integration
+* 🌙 Dark mode support
+* 📱 PWA support
+
+---
+
+## 👨‍💻 Author
+
+Built as a scalable frontend for a modern EdTech platform.
+
+---
+
+⭐ If you find this project helpful, consider giving it a star!
