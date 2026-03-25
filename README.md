@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📚 EdTech Frontend — Next.js Application
 
 Modern, scalable frontend architecture for an EdTech platform (Courses + Blog) built with **Next.js App Router**, **React**, and **Tailwind CSS**.
@@ -160,3 +161,7 @@ Built as a scalable frontend for a modern EdTech platform.
 ---
 
 ⭐ If you find this project helpful, consider giving it a star!
+=======
+# EdTech
+This is Initiation of blog and Edtech technology , i am workin on this with one of my friend to document everything that i have learnd in past years
+>>>>>>> 071cdf03a6bf1f00589eb1e61369dff47cf40887
